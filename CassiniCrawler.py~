@@ -16,7 +16,6 @@ class CassiniCrawler:
 		browseReq = urllib2.Request(self.browseUrl, data)
 		response = urllib2.urlopen(browseReq)
 		doc = response.readlines()
-		#scan specific lines in webpage for full res link
 		for i in range(3600,4100):
 			argumentIndex = doc[i].find('casJPGFull')
 			if(argumentIndex != -1):
